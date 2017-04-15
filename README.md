@@ -20,7 +20,7 @@ My zsh theme.
     colour used for continuation prompt)
 - Customizable hash salt via the environment variable `ZSH_THEME_HASH_SALT`, so
   if colours of your most-used hosts and users aren't to your liking they can be
-  tweaked
+  tweaked (set this before sourcing `oh-my-zsh.sh`)
 - Vi normal mode indicator on the right
 - Exit code always shown on the right, bright when non-zero
 - Git status on the right (by means of the [gitfast][gitfast] plugin I'm using
