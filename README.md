@@ -12,6 +12,12 @@ My zsh theme.
 
 ![Screenshot](http://i.imgur.com/N7gGsbw.png)
 
+### Requirements
+
+- [`bc`][bc] (on Debian-based distros, `sudo apt-get install bc`)
+
+### Features
+
 - Different colours for each user@host combination:
   - Username's colour is chosen via a hash of the username, except super users
     which are always bold white on red
@@ -28,5 +34,6 @@ My zsh theme.
   via environment variables)
 - Time on the right
 
+[bc]: https://en.wikipedia.org/wiki/Bc_(programming_language)
 [gitfast]: https://github.com/robbyrussell/oh-my-zsh/tree/master/plugins/gitfast
 [git-prompt]: https://github.com/git/git/blob/master/contrib/completion/git-prompt.sh
