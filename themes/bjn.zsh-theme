@@ -35,7 +35,6 @@ hashcolour() {
 	if $usebackground; then
 		hashablecolours=(\
 			$hashablecolours \
-			$bg[red]$fg[white] \
 			$bg[green]$fg[black] \
 			$bg[yellow]$fg[black] \
 			$bg[blue]$fg[white] \
