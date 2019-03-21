@@ -124,9 +124,6 @@ if [ "$uname" = "Darwin" ]; then
 	# Avoid GUI for entering private key passphrases on OS X
 	export SSH_AUTH_SOCK=
 
-	# Homebrew
-	export PATH="$(brew --prefix homebrew/php/php71)/bin:$PATH"
-
 	# React Native Android
 	export ANDROID_HOME=$HOME/Library/Android/sdk
 	export PATH=$PATH:$ANDROID_HOME/emulator
