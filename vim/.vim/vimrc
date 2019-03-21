@@ -163,6 +163,10 @@ autocmd BufRead */.git/rebase-apply/patch setfiletype diff
 autocmd FileType mail set textwidth=70 spell expandtab
 autocmd FileType mail set comments+=n:>
 
+" Disable python filetype plugin's "recommended" settings since they override
+" editorconfig
+let g:python_recommended_style = 0
+
 " Set filetype of .env.example files
 autocmd BufNewFile,BufRead .env.example setfiletype sh
 
