@@ -1,0 +1,53 @@
+# For this file to be active in GTK and QT some environment variables need to be 
+# present when X starts; I have them in ~/.profile
+#
+# export GTK_IM_MODULE=uim
+# export QT_IM_MODULE=uim
+
+# Import the default compose file for the current locale
+include "%L"
+
+# Turn some basic Ascii smilies into unicode emoji
+<Multi_key> <asciicircum> <3> <asciicircum> : "😙" # ^3^ => 😙 (kissing face with smiling eyes)
+<Multi_key> <asciicircum> <equal> <asciicircum> : "😄" # ^=^ => 😄 (smiling face with open mouth and smiling eyes)
+<Multi_key> <asciicircum> <underscore> <asciicircum> : "😊" # ^_^ => 😊 (smiling face with smiling eyes)
+<Multi_key> <asciicircum> <v> <asciicircum> : "😁" # ^v^ => 😁 (grinning face with smiling eyes)
+<Multi_key> <backslash> <o> <slash> : "🙌" # \o/ => 🙌 (person raising both hands in celebration)
+<Multi_key> <backslash> <o> <space> : "🙋" # \o<space> => 🙋 (happy person raising one hand)
+<Multi_key> <B> <parenright> : "😎" # B) => 😎 (smiling face with sunglasses)
+<Multi_key> <colon> <3> : "😗" # :3 => 😗 (kissing face)
+<Multi_key> <colon> <apostrophe> <bar> : "😓" # :'| => 😓 (face with cold sweat)
+<Multi_key> <colon> <apostrophe> <D> : "😂" # :'D => 😂 (face with tears of joy)
+<Multi_key> <colon> <apostrophe> <parenleft> : "😢" # :'( => 😢 (crying face)
+<Multi_key> <colon> <backslash> : "😕" # :\ => 😕 (confused face)
+<Multi_key> <colon> <bar> : "😐" # :| => 😐 (neutral face)
+<Multi_key> <colon> <bracketright> : "😏" # :] => 😏 (smirking face)
+<Multi_key> <colon> <D> : "😃" # :D => 😃 (smiling face with open mouth)
+<Multi_key> <colon> <O> : "😲" # :O => 😲 (astonished face)
+<Multi_key> <colon> <o> : "😮" # :o => 😮 (face with open mouth)
+<Multi_key> <colon> <parenleft> : "😞" # :( => 😞 (disappointed face)
+<Multi_key> <colon> <parenright> : "☺" # :) => ☺ (white smiling face)
+<Multi_key> <colon> <p> : "😋" # :p => 😋 (face savouring delicious food)
+<Multi_key> <colon> <P> : "😛" # :P => 😛 (face with stuck-out tongue)
+<Multi_key> <colon> <S> : "😖" # :S => 😖 (confounded face)
+<Multi_key> <colon> <x> : "😳" # :x => 😳 (flushed face)
+<Multi_key> <D> <8> : "😨" # D8 => 😨 (fearful face)
+<Multi_key> <D> <apostrophe> <X> : "😭" # D'X => 😭 (loudly crying face)
+<Multi_key> <D> <colon> : "😦" # D: => 😦 (frowning face with open mouth)
+<Multi_key> <D> <greater> : "😧" # D> => 😧 (anguished face)
+<Multi_key> <equal> <D> : "😀" # =D => 😀 (grinning face)
+<Multi_key> <greater> <colon> <parenleft> : "😠" # >:( => 😠 (angry face)
+<Multi_key> <less> <colon> <bar> : "😔" # <:| => 😔 (pensive face)
+<Multi_key> <less> <colon> <o> : "😯" # <:o => 😯 (hushed face)
+<Multi_key> <less> <colon> <parenleft> : "😟" # <:( => 😟 (worried face)
+<Multi_key> <notsign> <notsign> : "😒" # ¬¬ => 😒 (unamused face)
+<Multi_key> <o> <slash> : "🙋" # o/ => 🙋 (happy person raising one hand)
+<Multi_key> <semicolon> <parenright> : "😉" # ;) => 😉 (winking face)
+<Multi_key> <semicolon> <P> : "😜" # ;P => 😜 (face with stuck-out tongue and winking eye)
+<Multi_key> <X> <D> : "😆" # XD => 😆 (smiling face with open mouth and tightly-closed eyes)
+<Multi_key> <X> <parenleft> : "😣" # X( => 😣 (persevering face)
+<Multi_key> <X> <parenright> : "😆" # X) => 😆 (smiling face with open mouth and tightly-closed eyes)
+<Multi_key> <X> <P> : "😝" # XP => 😝 (face with stuck-out tongue and tightly-closed eyes)
+<Multi_key> <at> <at> : "🙄" # @@ => 🙄 (face with rolling eyes)
+<Multi_key> <plus> <1> : "👍" # +1 => 👍 (thumbs up sign)
+<Multi_key> <less> <3> : "❤️" # <3 => ❤️ (heavy black heart)
