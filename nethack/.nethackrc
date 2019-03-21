@@ -1,0 +1,3 @@
+#OPTIONS=windowtype:x11
+OPTIONS=windowtype:curses
+BOULDER = 048 # 0
