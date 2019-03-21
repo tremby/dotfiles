@@ -84,8 +84,6 @@ if version >= 700
 	highlight SpellCap ctermfg=black guifg=black guibg=blue
 	highlight SpellRare ctermfg=black guifg=black guibg=magenta
 	highlight SpellLocal ctermfg=black guifg=black guibg=cyan
-
-	highlight Comment cterm=italic
 endif
 
 " Enable true colour mode
