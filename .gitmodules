@@ -1,0 +1,57 @@
+[submodule "vim/.vim/pack/bundle/start/command-t"]
+	path = vim/.vim/pack/bundle/start/command-t
+	url = git@github.com:wincent/command-t.git
+[submodule "vim/.vim/pack/bundle/start/editorconfig-vim"]
+	path = vim/.vim/pack/bundle/start/editorconfig-vim
+	url = git@github.com:editorconfig/editorconfig-vim.git
+[submodule "vim/.vim/pack/bundle/start/typescript-vim"]
+	path = vim/.vim/pack/bundle/start/typescript-vim
+	url = git@github.com:leafgarland/typescript-vim.git
+[submodule "vim/.vim/pack/bundle/start/vdebug"]
+	path = vim/.vim/pack/bundle/start/vdebug
+	url = git@github.com:joonty/vdebug.git
+[submodule "vim/.vim/pack/bundle/start/vim-commentary"]
+	path = vim/.vim/pack/bundle/start/vim-commentary
+	url = git@github.com:tpope/vim-commentary.git
+[submodule "vim/.vim/pack/bundle/start/vim-css-color"]
+	path = vim/.vim/pack/bundle/start/vim-css-color
+	url = git@github.com:ap/vim-css-color.git
+[submodule "vim/.vim/pack/bundle/start/vim-eunuch"]
+	path = vim/.vim/pack/bundle/start/vim-eunuch
+	url = git@github.com:tpope/vim-eunuch.git
+[submodule "vim/.vim/pack/bundle/start/vim-flavored-markdown"]
+	path = vim/.vim/pack/bundle/start/vim-flavored-markdown
+	url = git@github.com:jtratner/vim-flavored-markdown.git
+[submodule "vim/.vim/pack/bundle/start/vim-fugitive"]
+	path = vim/.vim/pack/bundle/start/vim-fugitive
+	url = git@github.com:tpope/vim-fugitive.git
+[submodule "vim/.vim/pack/bundle/start/vim-indent-object"]
+	path = vim/.vim/pack/bundle/start/vim-indent-object
+	url = git@github.com:michaeljsmith/vim-indent-object.git
+[submodule "vim/.vim/pack/bundle/start/vim-javascript"]
+	path = vim/.vim/pack/bundle/start/vim-javascript
+	url = git@github.com:pangloss/vim-javascript.git
+[submodule "vim/.vim/pack/bundle/start/Vim-Jinja2-Syntax"]
+	path = vim/.vim/pack/bundle/start/Vim-Jinja2-Syntax
+	url = git@github.com:Glench/Vim-Jinja2-Syntax.git
+[submodule "vim/.vim/pack/bundle/start/vim-jsx"]
+	path = vim/.vim/pack/bundle/start/vim-jsx
+	url = git@github.com:mxw/vim-jsx.git
+[submodule "vim/.vim/pack/bundle/start/vim-mustache-handlebars"]
+	path = vim/.vim/pack/bundle/start/vim-mustache-handlebars
+	url = git@github.com:mustache/vim-mustache-handlebars.git
+[submodule "vim/.vim/pack/bundle/start/vim-repeat"]
+	path = vim/.vim/pack/bundle/start/vim-repeat
+	url = git@github.com:tpope/vim-repeat.git
+[submodule "vim/.vim/pack/bundle/start/vim-sensible"]
+	path = vim/.vim/pack/bundle/start/vim-sensible
+	url = git@github.com:tpope/vim-sensible.git
+[submodule "vim/.vim/pack/bundle/start/vim-surround"]
+	path = vim/.vim/pack/bundle/start/vim-surround
+	url = git@github.com:tpope/vim-surround.git
+[submodule "vim/.vim/pack/bundle/start/vim-tmux-focus-events"]
+	path = vim/.vim/pack/bundle/start/vim-tmux-focus-events
+	url = git@github.com:tmux-plugins/vim-tmux-focus-events.git
+[submodule "vim/.vim/pack/bundle/start/vim-vue"]
+	path = vim/.vim/pack/bundle/start/vim-vue
+	url = git@github.com:posva/vim-vue.git
