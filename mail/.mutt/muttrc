@@ -1,0 +1,205 @@
+set mbox_type=Maildir
+set from=bart@tremby.net
+set use_from
+set envelope_from
+set realname="Bart Nagel"
+set imap_user="bart@tremby.net"
+set spoolfile=imaps://imap.gmail.com:993/INBOX
+set smtp_url="smtp://bart@tremby.net@smtp.gmail.com:587/"
+set folder="imaps://imap.gmail.com:993"
+set record="+[Google Mail]/Sent Mail"
+set postponed="+[Google Mail]/Drafts"
+set trash="+[Google Mail]/Bin"
+set header_cache="~/.mutt/cache/headers"
+set message_cachedir="~/.mutt/cache/bodies"
+set certificate_file=~/.mutt/certificates
+set imap_keepalive=60
+alternates 'wemolohtrab@gmail\.com' # Gmail
+alternates 'bart\.nagel@ukonline\.co\.uk' # UKOnline
+alternates 'bart@livesoc\.co\.uk' # livesoc.co.uk
+alternates 'bart@bbwiens\.net' # bbwiens.net
+alternates 'bart@thelivid\.com' # thelivid.com
+alternates 'bjn(104)?@ecs\.soton\.ac\.uk|bartnagel@zepler\.net|(bjn1(v08|04)|bart\.nagel)@soton\.ac\.uk|bart@susu\.org' # Uni stuff
+alternates '.*@(tremby\.(net|com|co\.uk)|bartnagel\.(co\.uk|ca)|rtnagel\.(net|com|ca|co\.uk)|bnagel\.net)' # My name domains
+unalternates 'gitlab@tremby\.net'
+
+subscribe 'easi-he@lists\.soton\.ac\.uk'
+subscribe 'archive-online@orpheusinternet\.co\.uk'
+subscribe 'southamptonfreecycle@yahoogroups\.co\.uk'
+subscribe 'musicpd-dev-team@lists\.sourceforge\.net'
+subscribe 'user@slf4j\.org|slf4j-user@qos\.ch'
+subscribe 'ims-qti@lists\.ucles\.org\.uk'
+subscribe 'awesome@naquadah\.org'
+subscribe 'vim_use@googlegroups\.com|vim@vim\.org'
+subscribe 'mrx-com07@lists\.lis\.uiuc\.edu|nema-developers@googlegroups\.com'
+subscribe 'vimplugin-devel@lists\.sourceforge\.net'
+subscribe 'lirc-list@lists\.sourceforge\.net'
+subscribe 'steamlinuxbeta@list\.valvesoftware\.com'
+
+set date_format="!%Y-%m-%d %T %Z"
+
+set hdr_format="%4C %Z %{%Y-%m-%d %H:%M} %-15.15F %c %s"
+hdr_order Date From To Cc Reply-To Subject
+ignore *
+unignore Date From To Cc Reply-To Subject Mail-Followup-To Bcc Delivered-To
+set index_format="%4C %Z %[%Y-%m-%d %H:%M] %-15.15F %c %s"
+
+auto_view text/html
+
+set copy=no # Google Mail saves a copy when it receives it via SMTP
+set move=no
+set delete=yes # Don't ask for confirmation when messages are to be purged, since Google holds them in the bin anyway
+set edit_hdrs
+set include
+set reply_to
+set beep_new=yes
+set forward_quote=yes
+set forward_format="Fwd: %s"
+set include=yes
+set mail_check=120
+set timeout=15
+set reverse_name=yes
+set reverse_realname=no
+unset markers
+set smart_wrap
+set pager_context=3
+set pager_stop=yes
+set tilde
+#unset collapse_unread
+unset mark_old
+alternative_order text/plain text/html # Show the text mimetype first
+set fast_reply
+set mime_forward=ask-no
+set reverse_alias=yes
+
+set sort=threads
+set sort_aux=last-date-received
+set imap_check_subscribed
+
+mailboxes !
+
+set editor="vim %s"
+
+set alias_file=~/.mutt/mail_aliases
+source ~/.mutt/mail_aliases
+set query_command="goobook query '%s'"
+macro index,pager A "<pipe-message>goobook add<return>" "add the sender address to Google contacts"
+bind editor <Tab> complete-query
+
+set alias_format="%4n %2f %t %-12a  %r"
+set attribution='At %d, %n wrote:'
+
+#### Vim-like bindings
+bind generic z noop
+bind generic zt current-top
+bind generic zz current-middle
+bind generic zb current-bottom
+bind generic,index,pager \CF next-page
+bind generic,index,pager \CB previous-page
+bind index,pager,attach R group-reply
+bind generic,index H top-page
+bind generic,index L bottom-page
+bind generic,index M middle-page
+bind generic,index,pager g noop
+bind generic,index gg first-entry
+bind generic,index G last-entry
+bind pager gg top
+bind pager G bottom
+bind generic,index,pager \CU half-up
+bind generic,index,pager \CD half-down
+bind generic,index,pager \CE next-line
+bind generic,index,pager \CY previous-line
+bind generic N search-opposite
+bind generic ? search-reverse
+bind generic <F1> help
+bind generic - tag-entry
+bind pager - tag-message
+bind index _ tag-thread
+bind index <esc>- tag-pattern
+bind index <esc>_ untag-pattern
+bind generic,pager t noop
+bind index tn toggle-new
+bind index tf set-flag
+bind index tF clear-flag
+macro index tr "tfr" "Set \"replied\" flag"
+macro index tR "tFr" "Clear \"replied\" flag"
+bind index,pager t! flag-message
+
+#### Macros and such
+
+# Go to various gmail folders
+macro index,pager ga "<change-folder>=[Google Mail]/All Mail<enter>" "Go to all mail"
+macro index,pager gi "<change-folder>=INBOX<enter>" "Go to inbox"
+macro index,pager gd "<change-folder>=[Google Mail]/Drafts<enter>" "Go to drafts"
+
+# Stop space from doing a expansion so it can be used reliably in macros
+bind editor <space> noop
+
+# Archive (only available from inbox) and unarchive (only /not/ in inbox)
+bind generic,index,pager <esc><esc>n noop # need to macro it to /something/, so set up a key to do nothing
+folder-hook . 'macro index,pager y "<esc><esc>n" "Archive only available in inbox";macro index,pager Y "<copy-message>=INBOX<enter>" "Unarchive (copy to inbox)"'
+folder-hook "INBOX" 'macro index,pager y "<save-message>=[Google Mail]/All Mail<enter>y" "Archive (move to All Mail)";macro index,pager Y "<esc><esc>n" "Unarchive unavailable in inbox"'
+
+# Spam
+macro index,pager S "<save-message>=[Google Mail]/Spam<enter>" "Spam"
+
+set pgp_show_unusable=no
+
+## GPG stuff -- mostly from
+# http://blog.grossmeier.net/2009/01/25/imapfilterofflineimapmsmtpmuttabook/
+set pgp_decode_command="gpg %?p?--passphrase-fd 0? --no-verbose --batch --output - %f"
+set pgp_verify_command="gpg --no-verbose --batch --output - --verify %s %f"
+set pgp_decrypt_command="gpg --passphrase-fd 0 --no-verbose --batch --output - %f"
+set pgp_sign_command="gpg --no-verbose --batch --output - --passphrase-fd 0 --armor --detach-sign --textmode %?a?-u %a? %f"
+set pgp_clearsign_command="gpg --no-verbose --batch --output - --passphrase-fd 0 --armor --textmode --clearsign %?a?-u %a? %f"
+set pgp_encrypt_only_command="/usr/lib/mutt/pgpewrap gpg --batch --quiet --no-verbose --output - --encrypt --textmode --armor --always-trust --encrypt-to 0xF80C84AB -- -r %r -- %f"
+set pgp_encrypt_sign_command="/usr/lib/mutt/pgpewrap gpg --passphrase-fd 0 --batch --quiet --no-verbose --textmode --output - --encrypt --sign %?a?-u %a? --armor --always-trust --encrypt-to 0xF80C84AB -- -r %r -- %f"
+set pgp_import_command="gpg --no-verbose --import -v %f"
+set pgp_export_command="gpg --no-verbose --export --armor %r"
+set pgp_verify_key_command="gpg --no-verbose --batch --fingerprint --check-sigs %r"
+set pgp_list_pubring_command="gpg --no-verbose --batch --with-colons --list-keys %r" 
+set pgp_list_secring_command="gpg --no-verbose --batch --with-colons --list-secret-keys %r" 
+
+# This set the number of seconds to keep in memory the passpharse used to encrypt/sign
+# The more the less secure it will be
+set pgp_timeout=60
+
+# It's a regexp used against the GPG output: if it matches some line of the output
+# then mutt considers the message a good signed one (ignoring the GPG exit code)
+set pgp_good_sign="^gpg: Good signature from"
+
+# Mutt uses by default PGP/GPG to sign/encrypt messages
+# If you want to use S-mime instead set the smime_is_default variable to yes
+
+set crypt_replysign=yes
+set crypt_replyencrypt=yes
+set crypt_replysignencrypted=yes
+
+# Automatically verify the sign of a message when opened
+set crypt_verify_sig=yes
+###
+
+color normal default default
+color tree brightred default
+color bold brightwhite default
+color underline black white
+color hdrdefault cyan default
+color signature green default
+color attachment yellow default
+color indicator brightwhite blue
+color quoted green default
+color quoted1 magenta default
+color quoted2 white default
+color tilde blue default
+color status brightblack black
+
+macro compose M "<filter-entry>commonmark<return>y<edit-type><kill-line>text/html<return>" "convert message to HTML with Commonmark"
+
+# Conditional stuff based on term type
+source `FILE=$HOME/.mutt/muttrc-$TERM; if [ ! -s "$FILE" ]; then FILE=/dev/null; fi; echo "$FILE"`
+
+# Conditional stuff based on machine
+source `FILE=$HOME/.mutt/muttrc-local; if [ ! -s "$FILE" ]; then FILE=/dev/null; fi; echo "$FILE"`
+
+# Passwords
+source $HOME/.mutt/passwords
