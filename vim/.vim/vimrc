@@ -12,9 +12,15 @@ set nojoinspaces
 set synmaxcol=512
 
 " Change cursors in different modes
-let &t_SI = "\e[6 q" " Start insert (bar)
-let &t_EI = "\e[2 q" " End insert/replace (block)
-let &t_SR = "\e[4 q" " Start replace (underline)
+if exists('$TMUX')
+	let &t_SI .= "\ePtmux;\e\e[6 q\e\\" " Start insert (bar)
+	let &t_EI .= "\ePtmux;\e\e[2 q\e\\" " End insert/replace (block)
+	let &t_SR .= "\ePtmux;\e\e[4 q\e\\" " Start replace (underline)
+else
+	let &t_SI = "\e[6 q" " Start insert (bar)
+	let &t_EI = "\e[2 q" " End insert/replace (block)
+	let &t_SR = "\e[4 q" " Start replace (underline)
+endif
 
 " Readout
 set showcmd
