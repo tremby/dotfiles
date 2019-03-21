@@ -1,0 +1,22 @@
+[user]
+	name = Bart Nagel
+	email = bart@tremby.net
+[color]
+	ui = auto
+[merge]
+	tool = vimdiff
+[alias]
+	graph1 = log --graph --decorate --all --format=format:'%C(yellow)%h%C(reset) %C(white)%s%C(reset) %C(cyan)%an%C(reset) %C(magenta)%ar%C(reset)%C(auto)%d%C(reset)'
+	graph2 = log --graph --decorate --all --format=format:'%C(yellow)%h%C(reset) %C(green)%aD%C(reset) %C(magenta)%ar%C(reset)%C(auto)%d%C(reset)%n       %C(yellow)`-%C(reset) %C(white)%s%C(reset) %C(cyan)%an%C(reset)'
+	graph = !"git graph1"
+	logg = log --graph --decorate --all --oneline
+	releaselog = !"git shortlog --no-merges $(git tag | tail -n 1)..HEAD"
+[push]
+	default = upstream
+[tag]
+	sort = version:refname
+[versionsort]
+	prereleaseSuffix = -rc
+[include]
+	# For credentials etc
+	path = ~/.gitconfig.local

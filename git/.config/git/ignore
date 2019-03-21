@@ -1,0 +1,7 @@
+*.swo
+*.swp
+.DS_Store
+*.bak
+.sass-cache
+*.pyc
+npm-debug.log
