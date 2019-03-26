@@ -138,6 +138,9 @@ if [ "$uname" = "Darwin" ]; then
 	# RVM
 	export PATH="$PATH:$HOME/.rvm/bin"
 	export PATH="/usr/local/opt/ruby/bin:$PATH"
+
+	# Override browser
+	export BROWSER=open
 fi
 
 # Heroku toolbelt
