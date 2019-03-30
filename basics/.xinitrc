@@ -21,6 +21,12 @@
 	xte "mousemove 7680 0" # xte is found in xautomation package
 } &
 
+# Hide the mouse pointer
+# Use https://github.com/Airblader/unclutter-xfixes rather than the original.
+# Ensure it isn't starting twice -- if the original unclutter is installed it
+# may be running automatically at startup due to /etc/X11/Xsession.d/90unclutter
+unclutter --idle 3 --root &
+
 # Run music player notifier
 mpn &
 
