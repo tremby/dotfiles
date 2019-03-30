@@ -65,6 +65,10 @@ bindsym $mod+Right focus right
 # Focus urgent window
 bindsym $mod+u [urgent=latest] focus
 
+# Focus last-focused window
+exec --no-startup-id ~/.config/i3/track-last-focused.sh
+bindsym $mod+Tab [con_mark=_last] focus
+
 # move focused window
 bindsym $mod+Shift+h move left
 bindsym $mod+Shift+j move down
