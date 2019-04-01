@@ -61,3 +61,6 @@
 [submodule "tmux/.tmux/plugins/tpm"]
 	path = tmux/.tmux/plugins/tpm
 	url = https://github.com/tmux-plugins/tpm
+[submodule "vim/.vim/pack/bundle/start/vim-abolish"]
+	path = vim/.vim/pack/bundle/start/vim-abolish
+	url = https://github.com/tpope/vim-abolish.git
