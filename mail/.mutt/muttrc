@@ -14,6 +14,8 @@ set header_cache="~/.mutt/cache/headers"
 set message_cachedir="~/.mutt/cache/bodies"
 set certificate_file=~/.mutt/certificates
 set imap_keepalive=60
+set ssl_starttls=yes
+set smtp_authenticators="plain"
 alternates 'wemolohtrab@gmail\.com' # Gmail
 alternates 'bart\.nagel@ukonline\.co\.uk' # UKOnline
 alternates 'bart@livesoc\.co\.uk' # livesoc.co.uk
@@ -67,7 +69,7 @@ set pager_stop=yes
 set tilde
 #unset collapse_unread
 unset mark_old
-alternative_order text/plain text/html # Show the text mimetype first
+alternative_order text/markdown text/enriched text/plain text/html # Show the text mimetype first
 set fast_reply
 set mime_forward=ask-no
 set reverse_alias=yes
@@ -142,6 +144,9 @@ folder-hook "INBOX" 'macro index,pager y "<save-message>=[Google Mail]/All Mail<
 
 # Spam
 macro index,pager S "<save-message>=[Google Mail]/Spam<enter>" "Spam"
+
+# Multipart/alternative
+macro compose K "| commonmark >/tmp/neomutt-alternative.html<enter><attach-file>/tmp/neomutt-alternative.html<enter><tag-entry><previous-entry><tag-entry><group-alternatives>"
 
 set pgp_show_unusable=no
 
