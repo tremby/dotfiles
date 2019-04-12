@@ -5,6 +5,8 @@
 	ui = auto
 [merge]
 	tool = vimdiff
+[rebase]
+	autosquash = true
 [alias]
 	graph1 = log --graph --decorate --all --format=format:'%C(yellow)%h%C(reset) %C(white)%s%C(reset) %C(cyan)%an%C(reset) %C(magenta)%ar%C(reset)%C(auto)%d%C(reset)'
 	graph2 = log --graph --decorate --all --format=format:'%C(yellow)%h%C(reset) %C(green)%aD%C(reset) %C(magenta)%ar%C(reset)%C(auto)%d%C(reset)%n       %C(yellow)`-%C(reset) %C(white)%s%C(reset) %C(cyan)%an%C(reset)'
