@@ -161,6 +161,10 @@ autocmd BufRead */.git/rebase-apply/patch setfiletype diff
 autocmd FileType mail set textwidth=70 spell expandtab
 autocmd FileType mail set comments+=n:>
 
+" CSS-specific
+autocmd FileType css set iskeyword+=-
+autocmd FileType scss set iskeyword+=-
+
 " Disable python filetype plugin's "recommended" settings since they override
 " editorconfig
 let g:python_recommended_style = 0
