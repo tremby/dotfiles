@@ -30,6 +30,9 @@ unclutter --idle 3 --root &
 # Run redshift
 redshift-gtk &
 
+# Run bluetooth manager
+blueman-manager &
+
 # Run local settings if there are any
 if [ -f $HOME/.xinitrc.local ]; then
 	. $HOME/.xinitrc.local
