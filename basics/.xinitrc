@@ -4,10 +4,6 @@
 #xrdb -load $HOME/.Xresources # This appears to be done automatically
 
 {
-	# Set keymap, compose key, and make caps lock another control key
-	#setxkbmap gb dvorak compose:ralt ctrl:nocaps # For regular keyboards
-	setxkbmap us -option compose:ralt # For Keyboardio Model 01
-
 	# Set mouse speed
 	xset m 17/10 17/10
 
