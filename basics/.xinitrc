@@ -27,14 +27,8 @@
 # may be running automatically at startup due to /etc/X11/Xsession.d/90unclutter
 unclutter --idle 3 --root &
 
-# Run music player notifier
-mpn &
-
 # Run redshift
 redshift-gtk &
-
-# Run snapcast client
-snapclient --host $MPD_HOST --soundcard pulse &
 
 # Run local settings if there are any
 if [ -f $HOME/.xinitrc.local ]; then
