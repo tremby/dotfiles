@@ -148,7 +148,7 @@ folder-hook "INBOX" 'macro index,pager y "<save-message>=[Google Mail]/All Mail<
 macro index,pager S "<save-message>=[Google Mail]/Spam<enter>" "Spam"
 
 # Multipart/alternative
-macro compose K "| commonmark >/tmp/neomutt-alternative.html<enter><attach-file>/tmp/neomutt-alternative.html<enter><tag-entry><previous-entry><tag-entry><group-alternatives>"
+macro compose K "<pipe-message>$HOME/.mutt/make-alternative.sh<enter><attach-file>/tmp/neomutt-alternative.html<enter><tag-entry><previous-entry><tag-entry><group-alternatives>"
 
 set pgp_show_unusable=no
 
