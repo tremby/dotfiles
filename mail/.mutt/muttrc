@@ -82,13 +82,10 @@ mailboxes !
 
 set editor="vim %s"
 
-set alias_file=~/.mutt/mail_aliases
-source ~/.mutt/mail_aliases
 set query_command="goobook query '%s'"
 macro index,pager A "<pipe-message>goobook add<return>" "add the sender address to Google contacts"
 bind editor <Tab> complete-query
 
-set alias_format="%4n %2f %t %-12a  %r"
 set attribution='At %d, %n wrote:'
 
 set wait_key=no
