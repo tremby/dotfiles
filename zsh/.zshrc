@@ -158,6 +158,6 @@ fi
 export GPG_TTY=$(tty)
 
 # MPD host
-if [ $(hostname) = spiral ]; then
+if [ $(hostname) = spiral -o $(hostname) = elastic ]; then
 	export MPD_HOST=hoard
 fi
