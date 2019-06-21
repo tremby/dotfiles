@@ -34,5 +34,9 @@ if [ -f $HOME/.xinitrc.local ]; then
 	. $HOME/.xinitrc.local
 fi
 
+# Tidy up any focus tracking scripts still running from a previous instance of
+# i3
+kill $(pgrep -f track-last-focused.sh)
+
 # Run the window manager
 exec i3
