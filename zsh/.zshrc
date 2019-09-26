@@ -138,6 +138,9 @@ if [ "$uname" = "Darwin" ]; then
 
 	# Override browser
 	export BROWSER=open
+
+	# Mysql 5.7
+	export PATH=$PATH:/usr/local/opt/mysql@5.7/bin
 fi
 
 # Ruby
