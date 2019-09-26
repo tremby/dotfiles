@@ -10,6 +10,7 @@ set textwidth=80
 set foldlevelstart=99
 set nojoinspaces
 set synmaxcol=512
+set breakindent
 
 " Change cursors in different modes
 if exists('$TMUX')
