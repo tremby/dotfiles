@@ -98,6 +98,9 @@ export ZSH_THEME_HASH_SALT=2
 
 source $ZSH/oh-my-zsh.sh
 
+# Oh-my-zsh has switched on autocd. I don't like that.
+unsetopt autocd
+
 # Overrides
 
 # I do not want to run a command in shell A and then have it suddenly listed as
