@@ -10,9 +10,6 @@
 	# Set keyboard repeat rate
 	xset r rate 300 25 2>/dev/null
 
-	# Switch off X screensaver
-	xset s off
-
 	# Put the pointer in the top right corner
 	xte "mousemove 7680 0" # xte is found in xautomation package
 } &
