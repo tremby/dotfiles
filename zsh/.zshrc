@@ -161,3 +161,10 @@ export GPG_TTY=$(tty)
 if [ $(hostname) = spiral -o $(hostname) = elastic ]; then
 	export MPD_HOST=hoard
 fi
+
+# fzf
+FZF_DIR=/usr/local/opt
+if [[ ! "$PATH" == *$FZF_DIR/fzf/bin* ]]; then
+  export PATH="${PATH:+${PATH}:}$FZF_DIR/fzf/bin"
+fi
+[[ $- == *i* ]] && source "$FZF_DIR/fzf/shell/completion.zsh" 2>/dev/null

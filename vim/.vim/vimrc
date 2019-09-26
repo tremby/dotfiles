@@ -67,9 +67,6 @@ endfor
 " Diffs
 set diffopt=filler,iwhite
 
-" Command-T configuration
-let g:CommandTFileScanner="git"
-
 " Expand %% on command line to directory of current file
 cnoremap %% <C-R>=expand('%:h').'/'<CR>
 
@@ -176,3 +173,14 @@ autocmd BufNewFile,BufRead .env.example setfiletype sh
 autocmd FileType timesheet nnoremap <buffer> <Return><Return> :r !date +"\%Y-\%m-\%dT\%H:\%M:\%S\%z (\%a)"<Return>A<Tab>
 autocmd FileType timesheet nnoremap <buffer> <Return>s o<Esc>:r !date +"\%YW\%W"<Return>Istart<Tab><Esc>
 autocmd FileType timesheet inoremap <buffer> <Space><Space> <Tab><Esc>m`k03Wyt<Tab>``pa<Tab>
+
+" FZF runtime
+if isdirectory($HOME + "/src/fzf")
+	let runtimepath += $HOME + "/src/fzf"
+elseif isdirectory("/usr/local/opt/fzf")
+	set runtimepath+=/usr/local/opt/fzf
+endif
+
+" FZF bindings
+nmap <leader>f :Files<Return>
+nmap <leader>t :GFiles<Return>
