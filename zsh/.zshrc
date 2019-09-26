@@ -136,13 +136,17 @@ if [ "$uname" = "Darwin" ]; then
 	export NVM_DIR="$HOME/.nvm"
 	[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # Load NVM
 
-	# RVM
-	export PATH="$PATH:$HOME/.rvm/bin"
-	export PATH="/usr/local/opt/ruby/bin:$PATH"
-
 	# Override browser
 	export BROWSER=open
 fi
+
+# Ruby
+if [ "$uname" = "Darwin" ]; then
+	export PATH="/usr/local/opt/ruby/bin:$PATH"
+else
+	export PATH="$HOME/.rbenv/bin:$PATH"
+fi
+eval "$(rbenv init -)"
 
 # Heroku toolbelt
 if [ -d /usr/local/heroku/bin ]; then
