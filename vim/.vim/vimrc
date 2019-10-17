@@ -185,3 +185,6 @@ endif
 " FZF bindings
 nmap <leader>f :Files<Return>
 nmap <leader>t :GFiles<Return>
+
+" Select last-changed text in same visual mode
+nnoremap <expr> <leader>gv '`[' . strpart(getregtype(), 0, 1) . '`]'
