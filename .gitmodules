@@ -31,9 +31,6 @@
 [submodule "vim/.vim/pack/bundle/start/Vim-Jinja2-Syntax"]
 	path = vim/.vim/pack/bundle/start/Vim-Jinja2-Syntax
 	url = git@github.com:Glench/Vim-Jinja2-Syntax.git
-[submodule "vim/.vim/pack/bundle/start/vim-jsx"]
-	path = vim/.vim/pack/bundle/start/vim-jsx
-	url = git@github.com:mxw/vim-jsx.git
 [submodule "vim/.vim/pack/bundle/start/vim-mustache-handlebars"]
 	path = vim/.vim/pack/bundle/start/vim-mustache-handlebars
 	url = git@github.com:mustache/vim-mustache-handlebars.git
@@ -64,3 +61,6 @@
 [submodule "vim/.vim/pack/bundle/start/fzf.vim"]
 	path = vim/.vim/pack/bundle/start/fzf.vim
 	url = git@github.com:junegunn/fzf.vim.git
+[submodule "vim/.vim/pack/bundle/start/vim-jsx-pretty"]
+	path = vim/.vim/pack/bundle/start/vim-jsx-pretty
+	url = git@github.com:MaxMEllon/vim-jsx-pretty.git
