@@ -160,8 +160,8 @@ if [ -d /usr/local/heroku/bin ]; then
 fi
 
 # Arduino SDK
-if [ -d /usr/local/arduino ]; then
-	export ARDUINO_PATH=/usr/local/arduino
+if [ -d /opt/arduino ]; then
+	export ARDUINO_PATH=/opt/arduino
 fi
 
 # For GPG/vim
