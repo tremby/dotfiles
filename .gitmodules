@@ -64,3 +64,6 @@
 [submodule "vim/.vim/pack/bundle/start/vim-jsx-pretty"]
 	path = vim/.vim/pack/bundle/start/vim-jsx-pretty
 	url = git@github.com:MaxMEllon/vim-jsx-pretty.git
+[submodule "vim/.vim/pack/bundle/start/vim-unimpaired"]
+	path = vim/.vim/pack/bundle/start/vim-unimpaired
+	url = git@github.com:tpope/vim-unimpaired.git
