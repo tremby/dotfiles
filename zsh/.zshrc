@@ -178,3 +178,5 @@ if [[ ! "$PATH" == *$FZF_DIR/fzf/bin* ]]; then
   export PATH="${PATH:+${PATH}:}$FZF_DIR/fzf/bin"
 fi
 [[ $- == *i* ]] && source "$FZF_DIR/fzf/shell/completion.zsh" 2>/dev/null
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
