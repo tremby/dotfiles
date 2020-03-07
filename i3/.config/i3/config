@@ -30,15 +30,15 @@ font pango:DejaVu Sans Mono 8
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec i3-sensible-terminal
+bindsym $mod+Return exec --no-startup-id i3-sensible-terminal
 
 # Launch various things
-bindsym $mod+Mod1+Control+l exec lock
-bindsym $mod+Mod1+Control+p exec mpc toggle
-bindsym $mod+Mod1+Control+period exec mpc next
-bindsym $mod+Mod1+Control+comma exec mpc prev
-bindsym $mod+Mod1+Control+apostrophe exec mpc seek -15
-bindsym $mod+Mod1+Control+y exec mpn --once
+bindsym $mod+Mod1+Control+l exec --no-startup-id lock
+bindsym $mod+Mod1+Control+p exec --no-startup-id mpc toggle
+bindsym $mod+Mod1+Control+period exec --no-startup-id mpc next
+bindsym $mod+Mod1+Control+comma exec --no-startup-id mpc prev
+bindsym $mod+Mod1+Control+apostrophe exec --no-startup-id mpc seek -15
+bindsym $mod+Mod1+Control+y exec --no-startup-id mpn --once
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -173,13 +173,13 @@ bindsym XF86AudioLowerVolume exec --no-startup-id volume 5%- --notify #decrease 
 bindsym XF86AudioMute exec --no-startup-id volume --toggle --notify # mute sound
 
 # Sreen brightness controls
-bindsym XF86MonBrightnessUp exec "light -A 5 && notify-send.sh Brightness --expire-time=1500 --icon=display --hint=int:value:$(printf %d $(light -G)) --replace-file=/tmp/brightness-notification-id"
-bindsym XF86MonBrightnessDown exec "light -U 5 && notify-send.sh Brightness --expire-time=1500 --icon=display --hint=int:value:$(printf %d $(light -G)) --replace-file=/tmp/brightness-notification-id"
+bindsym XF86MonBrightnessUp exec --no-startup-id "light -T 1.25 && notify-send.sh Brightness --expire-time=1500 --icon=display --hint=int:value:$(printf %d $(light -G)) --replace-file=/tmp/brightness-notification-id"
+bindsym XF86MonBrightnessDown exec --no-startup-id "light -T 0.8 && notify-send.sh Brightness --expire-time=1500 --icon=display --hint=int:value:$(printf %d $(light -G)) --replace-file=/tmp/brightness-notification-id"
 
 # Media player controls
-bindsym XF86AudioPlay exec mpc toggle
-bindsym XF86AudioNext exec mpc next
-bindsym XF86AudioPrev exec mpc prev
+bindsym XF86AudioPlay exec --no-startup-id mpc toggle
+bindsym XF86AudioNext exec --no-startup-id mpc next
+bindsym XF86AudioPrev exec --no-startup-id mpc prev
 
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
