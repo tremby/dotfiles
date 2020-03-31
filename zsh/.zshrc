@@ -123,6 +123,9 @@ export GIT_PS1_SHOWCOLORHINTS=true
 # Reduce timeout on esc key from 0.4 to 0.1 seconds
 export KEYTIMEOUT=1
 
+# Get X11 compose key to work in GTK applications
+export XMODIFIERS=@im=none
+
 # More Mac-specific bits
 if [ "$uname" = "Darwin" ]; then
 	# Avoid GUI for entering private key passphrases on OS X
