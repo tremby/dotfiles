@@ -67,3 +67,6 @@
 [submodule "vim/.vim/pack/bundle/start/vim-unimpaired"]
 	path = vim/.vim/pack/bundle/start/vim-unimpaired
 	url = git@github.com:tpope/vim-unimpaired.git
+[submodule "vim/.vim/pack/bundle/start/vim-grammarous"]
+	path = vim/.vim/pack/bundle/start/vim-grammarous
+	url = git@github.com:rhysd/vim-grammarous.git
