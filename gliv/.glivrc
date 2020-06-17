@@ -19,7 +19,7 @@ menu          = False
 info          = True
 
 # Display scrollbars
-scrollbars    = True
+scrollbars    = False
 
 # Zoom centered on pointer
 zoom-pointer  = True
