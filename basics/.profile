@@ -22,8 +22,9 @@ if [ -d "$HOME/bin" ] ; then
 fi
 
 # For custom compose sequences
-export GTK_IM_MODULE=xim
-export QT_IM_MODULE=xim # uim may be better
+#export GTK_IM_MODULE=xim
+#export QT_IM_MODULE=xim
+#export XMODIFIERS=@im=xim
 
 # Use GTK theme for QT apps
 export QT_QPA_PLATFORMTHEME=gtk2
