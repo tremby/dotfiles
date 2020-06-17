@@ -22,3 +22,5 @@
 [include]
 	# For credentials etc
 	path = ~/.gitconfig.local
+[init]
+	templateDir = ~/.config/git/template.git
