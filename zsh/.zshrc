@@ -146,12 +146,8 @@ if [ "$uname" = "Darwin" ]; then
 	export PATH=$PATH:/usr/local/opt/mysql@5.7/bin
 fi
 
-# Ruby
-if [ "$uname" = "Darwin" ]; then
-	export PATH="/usr/local/opt/ruby/bin:$PATH"
-else
-	export PATH="$HOME/.rbenv/bin:$PATH"
-fi
+# Ruby: rbenv
+export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"
 
 # Heroku toolbelt
