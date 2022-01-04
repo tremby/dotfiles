@@ -1,3 +1,6 @@
+# Passwords
+source $HOME/.mutt/passwords
+
 set mbox_type=Maildir
 set from=bart@tremby.net
 set use_from
@@ -204,6 +207,3 @@ source `FILE=$HOME/.mutt/muttrc-$TERM; if [ ! -s "$FILE" ]; then FILE=/dev/null;
 
 # Conditional stuff based on machine
 source `FILE=$HOME/.mutt/muttrc-local; if [ ! -s "$FILE" ]; then FILE=/dev/null; fi; echo "$FILE"`
-
-# Passwords
-source $HOME/.mutt/passwords
