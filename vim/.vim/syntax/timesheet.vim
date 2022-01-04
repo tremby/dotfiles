@@ -6,7 +6,6 @@ elseif exists("b:current_syntax")
 	finish
 endif
 
-"syntax match timesheetTimestamp "^\(Sun\|Mon\|Tue\|Wed\|Thu\|Fri\|Sat\) [ 0-9]\{2\} \(Jan\|Feb\|Mar\|Apr\|May\|Jun\|Jul\|Aug\|Sep\|Oct\|Nov\|Dec\) [0-9]\{4\} [0-9]\{2\}:[0-9]\{2\}:[0-9]\{2\} [A-Z]\{3\}\t" nextgroup=timesheetStatus
 syntax match timesheetTimestamp "^[0-9]\{4\}\(-[0-9]\{2\}\)\{2\}T[0-9]\{2\}\(:[0-9]\{2\}\)\{2\}[+-][0-9]\{4\} " nextgroup=timesheetWeekday contains=timesheetTimestampDate,timesheetTimestampT,timesheetTimestampTimeHM,timesheetTimestampTz
 syntax match timesheetTimestampDate "^[0-9]\{4\}\(-[0-9]\{2\}\)\{2\}" contained
 syntax match timesheetTimestampT "\(^[0-9]\{4\}\(-[0-9]\{2\}\)\{2\}\)\@<=T" contained
@@ -29,6 +28,9 @@ syntax match timesheetProjectDocket "[A-Z]\{3\}-[A-Z]\{3\}-[A-Z][0-9]\{5\}" cont
 syntax match timesheetPeriodStart "^start\t" nextgroup=timesheetPeriodName
 syntax match timesheetPeriodName "[^#]\+" contained
 
+syntax match timesheetInvoice "^invoice\t" nextgroup=timesheetInvoiceName
+syntax match timesheetInvoiceName "[^\t#]\+" contained nextgroup=timesheetComment
+
 syntax match timesheetComment "#.*$"
 
 "hi def link timesheetTimestamp Number
@@ -43,13 +45,15 @@ hi def link timesheetProjectDocket Label
 hi def link timesheetComment Comment
 hi def link timesheetPeriodStart Keyword
 hi def link timesheetPeriodName Identifier
+hi def link timesheetInvoice Keyword
+hi def link timesheetInvoiceName Identifier
 
-hi def timesheetWeekdaySun ctermfg=black ctermbg=darkRed
-hi def timesheetWeekdayMon ctermfg=red
-hi def timesheetWeekdayTue ctermfg=yellow
-hi def timesheetWeekdayWed ctermfg=green
-hi def timesheetWeekdayThu ctermfg=blue
-hi def timesheetWeekdayFri ctermfg=darkMagenta
-hi def timesheetWeekdaySat ctermfg=white ctermbg=darkRed
+hi def timesheetWeekdaySun ctermfg=black ctermbg=darkRed guifg=black guibg=#ff7e73
+hi def timesheetWeekdayMon ctermfg=yellow guifg=#c4ab36
+hi def timesheetWeekdayTue ctermfg=green guifg=#6bd44d
+hi def timesheetWeekdayWed ctermfg=cyan guifg=#3edaa7
+hi def timesheetWeekdayThu ctermfg=blue guifg=#60b9ff
+hi def timesheetWeekdayFri ctermfg=darkMagenta guifg=#b689ff
+hi def timesheetWeekdaySat ctermfg=black ctermbg=magenta guifg=black guibg=#ff6fd6
 
 let b:current_syntax = "timesheet"
