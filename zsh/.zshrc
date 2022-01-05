@@ -143,8 +143,10 @@ if [ "$uname" = "Darwin" ]; then
 fi
 
 # Ruby: rbenv
-export PATH="$HOME/.rbenv/bin:$PATH"
-eval "$(rbenv init -)"
+if command -v rbenv; then
+	export PATH="$HOME/.rbenv/bin:$PATH"
+	eval "$(rbenv init -)"
+fi
 
 # Heroku toolbelt
 if [ -d /usr/local/heroku/bin ]; then
