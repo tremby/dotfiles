@@ -49,7 +49,6 @@ endif
 
 " Mode line
 set modeline
-set modelines=5
 
 " Change how completion works
 set wildmode=list:longest
