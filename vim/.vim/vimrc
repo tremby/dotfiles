@@ -206,3 +206,8 @@ nmap <leader>? :ALEHover<Return>
 nmap <leader>e? :ALEDetail<Return>
 nmap <leader>en :ALENext<Return>
 nmap <leader>eN :ALEPrevious<Return>
+
+" Jump between source, stories, tests of this file
+nmap <leader>g. :e<Space><C-R>%<C-F>:s/\.\@<=\(stories\\|test\)\.//ge<Return><Return>
+nmap <leader>gs :e<Space><C-R>%<C-F>:s/\.\@<=\(stories\\|test\)\.//ge<Return>$F.i.stories<Esc><Return>
+nmap <leader>gt :e<Space><C-R>%<C-F>:s/\.\@<=\(stories\\|test\)\.//ge<Return>$F.i.test<Esc><Return>
