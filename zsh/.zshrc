@@ -135,10 +135,6 @@ if [ "$uname" = "Darwin" ]; then
 	export PATH=$PATH:$ANDROID_HOME/tools/bin
 	export PATH=$PATH:$ANDROID_HOME/platform-tools
 
-	# NVM
-	export NVM_DIR="$HOME/.nvm"
-	[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # Load NVM
-
 	# Override browser
 	export BROWSER=open
 
@@ -176,3 +172,10 @@ fi
 [[ $- == *i* ]] && source "$FZF_DIR/fzf/shell/completion.zsh" 2>/dev/null
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+# NVM
+if [ -d $HOME/.nvm ]; then
+	export NVM_DIR="$HOME/.nvm"
+	[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # Load NVM
+	[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+fi
