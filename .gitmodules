@@ -49,3 +49,6 @@
 [submodule "vim/.vim/pack/bundle/start/vim-polyglot"]
 	path = vim/.vim/pack/bundle/start/vim-polyglot
 	url = https://github.com/sheerun/vim-polyglot
+[submodule "vim/.vim/pack/bundle/start/ale"]
+	path = vim/.vim/pack/bundle/start/ale
+	url = git@github.com:dense-analysis/ale.git

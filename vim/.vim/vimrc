@@ -192,3 +192,17 @@ nmap <leader>t :GFiles<Return>
 
 " Select last-changed text in same visual mode
 nnoremap <expr> <leader>gv '`[' . strpart(getregtype(), 0, 1) . '`]'
+" Configuration for ALE
+" Lint both CSS and JS in tsx and jsx files
+augroup FiletypeGroup
+	autocmd!
+	au BufNewFile,BufRead *.jsx set filetype=javascript.css
+	au BufNewFile,BufRead *.tsx set filetype=typescript.css
+augroup END
+let g:ale_completion_enabled = 1
+set omnifunc=ale#completion#OmniFunc
+let g:ale_completion_autoimport = 1
+nmap <leader>? :ALEHover<Return>
+nmap <leader>e? :ALEDetail<Return>
+nmap <leader>en :ALENext<Return>
+nmap <leader>eN :ALEPrevious<Return>
