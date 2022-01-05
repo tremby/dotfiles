@@ -67,6 +67,11 @@ endfor
 " Diffs
 set diffopt=filler,iwhite
 
+" I don't use any languages where > is a comment leader, but I do use HTML/JSX
+" where > sometimes comes at the start of a line, ending a multi-line tag, so
+" remove it from the comment leaders list
+set comments-=n:>
+
 " Expand %% on command line to directory of current file
 cnoremap %% <C-R>=expand('%:h').'/'<CR>
 
