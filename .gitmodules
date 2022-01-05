@@ -1,39 +1,21 @@
 [submodule "vim/.vim/pack/bundle/start/editorconfig-vim"]
 	path = vim/.vim/pack/bundle/start/editorconfig-vim
 	url = git@github.com:editorconfig/editorconfig-vim.git
-[submodule "vim/.vim/pack/bundle/start/typescript-vim"]
-	path = vim/.vim/pack/bundle/start/typescript-vim
-	url = git@github.com:leafgarland/typescript-vim.git
 [submodule "vim/.vim/pack/bundle/start/vdebug"]
 	path = vim/.vim/pack/bundle/start/vdebug
 	url = git@github.com:joonty/vdebug.git
 [submodule "vim/.vim/pack/bundle/start/vim-commentary"]
 	path = vim/.vim/pack/bundle/start/vim-commentary
 	url = git@github.com:tpope/vim-commentary.git
-[submodule "vim/.vim/pack/bundle/start/vim-css-color"]
-	path = vim/.vim/pack/bundle/start/vim-css-color
-	url = git@github.com:ap/vim-css-color.git
 [submodule "vim/.vim/pack/bundle/start/vim-eunuch"]
 	path = vim/.vim/pack/bundle/start/vim-eunuch
 	url = git@github.com:tpope/vim-eunuch.git
-[submodule "vim/.vim/pack/bundle/start/vim-flavored-markdown"]
-	path = vim/.vim/pack/bundle/start/vim-flavored-markdown
-	url = git@github.com:jtratner/vim-flavored-markdown.git
 [submodule "vim/.vim/pack/bundle/start/vim-fugitive"]
 	path = vim/.vim/pack/bundle/start/vim-fugitive
 	url = git@github.com:tpope/vim-fugitive.git
 [submodule "vim/.vim/pack/bundle/start/vim-indent-object"]
 	path = vim/.vim/pack/bundle/start/vim-indent-object
 	url = git@github.com:michaeljsmith/vim-indent-object.git
-[submodule "vim/.vim/pack/bundle/start/vim-javascript"]
-	path = vim/.vim/pack/bundle/start/vim-javascript
-	url = git@github.com:pangloss/vim-javascript.git
-[submodule "vim/.vim/pack/bundle/start/Vim-Jinja2-Syntax"]
-	path = vim/.vim/pack/bundle/start/Vim-Jinja2-Syntax
-	url = git@github.com:Glench/Vim-Jinja2-Syntax.git
-[submodule "vim/.vim/pack/bundle/start/vim-mustache-handlebars"]
-	path = vim/.vim/pack/bundle/start/vim-mustache-handlebars
-	url = git@github.com:mustache/vim-mustache-handlebars.git
 [submodule "vim/.vim/pack/bundle/start/vim-repeat"]
 	path = vim/.vim/pack/bundle/start/vim-repeat
 	url = git@github.com:tpope/vim-repeat.git
@@ -46,9 +28,6 @@
 [submodule "vim/.vim/pack/bundle/start/vim-tmux-focus-events"]
 	path = vim/.vim/pack/bundle/start/vim-tmux-focus-events
 	url = git@github.com:tmux-plugins/vim-tmux-focus-events.git
-[submodule "vim/.vim/pack/bundle/start/vim-vue"]
-	path = vim/.vim/pack/bundle/start/vim-vue
-	url = git@github.com:posva/vim-vue.git
 [submodule "zsh/.oh-my-zsh"]
 	path = zsh/.oh-my-zsh
 	url = git@github.com:robbyrussell/oh-my-zsh.git
@@ -61,12 +40,12 @@
 [submodule "vim/.vim/pack/bundle/start/fzf.vim"]
 	path = vim/.vim/pack/bundle/start/fzf.vim
 	url = git@github.com:junegunn/fzf.vim.git
-[submodule "vim/.vim/pack/bundle/start/vim-jsx-pretty"]
-	path = vim/.vim/pack/bundle/start/vim-jsx-pretty
-	url = git@github.com:MaxMEllon/vim-jsx-pretty.git
 [submodule "vim/.vim/pack/bundle/start/vim-unimpaired"]
 	path = vim/.vim/pack/bundle/start/vim-unimpaired
 	url = git@github.com:tpope/vim-unimpaired.git
 [submodule "vim/.vim/pack/bundle/start/vim-grammarous"]
 	path = vim/.vim/pack/bundle/start/vim-grammarous
 	url = git@github.com:rhysd/vim-grammarous.git
+[submodule "vim/.vim/pack/bundle/start/vim-polyglot"]
+	path = vim/.vim/pack/bundle/start/vim-polyglot
+	url = https://github.com/sheerun/vim-polyglot
