@@ -1,0 +1,61 @@
+comment_char %
+escape_char /
+
+% Based on /usr/share/i18n/locales/en_GB
+% Copy it to /usr/share/i18n/locales/bjncustom
+% Run localedef -f UTF-8 -i bjncustom bjncustom.UTF-8
+% Set LC_TIME=bjncustom.UTF-8
+
+LC_IDENTIFICATION
+title      "Custom date and time formats for bjn"
+source     ""
+address    ""
+contact    "Bart Nagel"
+email      "bart@tremby.net"
+tel        ""
+fax        ""
+language   "British English"
+territory  "United Kingdom"
+revision   "1.0"
+date       "2022-09-21"
+
+category "i18n:2012";LC_IDENTIFICATION
+category "i18n:2012";LC_TIME
+END LC_IDENTIFICATION
+
+LC_TIME
+abday       "Sun";"Mon";"Tue";"Wed";"Thu";"Fri";"Sat"
+day         "Sunday";/
+            "Monday";/
+            "Tuesday";/
+            "Wednesday";/
+            "Thursday";/
+            "Friday";/
+            "Saturday"
+abmon       "Jan";"Feb";/
+            "Mar";"Apr";/
+            "May";"Jun";/
+            "Jul";"Aug";/
+            "Sep";"Oct";/
+            "Nov";"Dec"
+mon         "January";/
+            "February";/
+            "March";/
+            "April";/
+            "May";/
+            "June";/
+            "July";/
+            "August";/
+            "September";/
+            "October";/
+            "November";/
+            "December"
+d_t_fmt     "%a %d %b %Y %T %Z"
+d_fmt       "%Y-%m-%d"
+t_fmt       "%T"
+am_pm       "am";"pm"
+t_fmt_ampm  "%l:%M:%S %P %Z"
+date_fmt    "%Y-%m-%d %T %Z (W%V-%a)"
+week    7;19971130;4
+first_weekday 2
+END LC_TIME
