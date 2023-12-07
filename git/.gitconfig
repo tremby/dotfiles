@@ -25,6 +25,7 @@
 [init]
 	templateDir = ~/.config/git/template.git
 [core]
+	commentChar = ";"
 	attributesFile = ~/.config/git/attributes
 [diff "json-pretty-if-oneline"]
 	textconv = [ "$(grep --count --max-count=2 ^ "$1")" -lt 2 ] && jq --sort-keys . "$1" || cat
