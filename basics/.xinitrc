@@ -27,6 +27,7 @@ fi
 unclutter --idle 3 --root &
 
 # Run redshift
+/usr/libexec/geoclue-2.0/demos/agent & # See https://github.com/jonls/redshift/issues/318#issuecomment-1250289455
 redshift-gtk &
 
 # Run bluetooth manager
