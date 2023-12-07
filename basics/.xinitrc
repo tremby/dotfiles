@@ -1,5 +1,11 @@
 #!/bin/bash
 
+# Environment variables
+# MPD host
+if [ $(hostname) = spiral -o $(hostname) = elastic ]; then
+	export MPD_HOST=hoard
+fi
+
 # Load X resources
 #xrdb -load $HOME/.Xresources # This appears to be done automatically
 
