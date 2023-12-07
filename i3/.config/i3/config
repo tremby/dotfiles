@@ -65,8 +65,8 @@ bindsym $mod+Right focus right
 bindsym $mod+u [urgent=latest] focus
 
 # Focus last-focused window
-exec --no-startup-id ~/.config/i3/track-last-focused.sh
-bindsym $mod+Tab [con_mark=_last] focus
+exec --no-startup-id i3-swap-focus
+bindsym $mod+Tab exec pkill -USR1 "${XDG_RUNTIME_DIR}/swap_focus.pid"
 
 # move focused window
 bindsym $mod+Shift+h move left
