@@ -13,6 +13,7 @@ image/*; gliv '%s'; test=test -n "$DISPLAY" && type gliv >/dev/null; description
 image/*; eog '%s'; test=test -n "$DISPLAY" && type eog >/dev/null; description=Image
 image/*; feh '%s'; test=test -n "$DISPLAY" && type feh >/dev/null; description=Image
 image/*; display '%s'; test=test -n "$DISPLAY" && type display >/dev/null; description=Image
+image/*; tiv '%s'; test=type tiv >/dev/null; description=Image; needsterminal; copiousoutput
 image/*; cacaview '%s'; test=type cacaview >/dev/null; description=Image; needsterminal
 image/*; img2txt '%s'; test=type img2txt >/dev/null; description=Image; needsterminal; copiousoutput
 
