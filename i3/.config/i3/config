@@ -2,6 +2,12 @@
 #
 # Please see https://i3wm.org/docs/userguide.html for a complete reference!
 
+# Rules for apps which don't correctly set hints
+for_window [class="zoom"] floating enable
+for_window [class="zoom" title="Zoom - Free Account"] floating disable
+for_window [class="zoom" title="Zoom - Licensed Account"] floating disable
+for_window [class="zoom" title="Zoom Meeting"] floating disable
+
 set $mod Mod4
 
 # Font for window titles. Will also be used by the bar unless a different font
