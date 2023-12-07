@@ -54,7 +54,7 @@ auto_view text/html
 set copy=no # Google Mail saves a copy when it receives it via SMTP
 set move=no
 set delete=yes # Don't ask for confirmation when messages are to be purged, since Google holds them in the bin anyway
-set edit_hdrs
+set edit_headers
 set include
 set reply_to
 set beep_new=yes
