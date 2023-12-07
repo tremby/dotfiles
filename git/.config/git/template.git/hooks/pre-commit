@@ -1,0 +1,12 @@
+#!/bin/bash
+
+YELLOW='\033[0;33m'
+RESET='\033[0m'
+
+todos="$(git diff --staged -U0 | grep "^+"| grep -v "^+++ [ab]/" | cut -c 2-  | grep "\bTODO\b" --color=always)"
+foundcode=$?
+
+if [ $foundcode -eq 0 ]; then
+	echo -e "${YELLOW}Warning: TODOs added in this commit${RESET}" >&2
+	echo "$todos" >&2
+fi
