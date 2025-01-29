@@ -47,6 +47,9 @@ ZSH_CUSTOM=$HOME/.oh-my-zsh-custom
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(urltools gitfast vi-mode colored-man-pages npm-completion)
 
+# Disable auto-escaping stuff when pasting. I'll deal with that myself, thanks.
+DISABLE_MAGIC_FUNCTIONS=true
+
 # User configuration
 
 # Aliases
