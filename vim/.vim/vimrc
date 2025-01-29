@@ -106,6 +106,32 @@ set grepprg=git\ grep\ -n\ $*
 
 " Mappings
 
+" Make F13 through F24 no-ops
+map [1;2P <Nop>
+map [1;2Q <Nop>
+map [1;2R <Nop>
+map [1;2S <Nop>
+map [15;2~ <Nop>
+map [17;2~ <Nop>
+map [18;2~ <Nop>
+map [19;2~ <Nop>
+map [20;2~ <Nop>
+map [21;2~ <Nop>
+map [23;2~ <Nop>
+map [24;2~ <Nop>
+map! [1;2P <Nop>
+map! [1;2Q <Nop>
+map! [1;2R <Nop>
+map! [1;2S <Nop>
+map! [15;2~ <Nop>
+map! [17;2~ <Nop>
+map! [18;2~ <Nop>
+map! [19;2~ <Nop>
+map! [20;2~ <Nop>
+map! [21;2~ <Nop>
+map! [23;2~ <Nop>
+map! [24;2~ <Nop>
+
 " Search for selected text, forwards or backwards
 vnoremap <silent> * :<C-U>
 	\let old_reg=getreg('"')<Bar>let old_regtype=getregtype('"')<CR>
