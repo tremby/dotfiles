@@ -208,26 +208,35 @@ elseif isdirectory("/usr/local/opt/fzf")
 	set runtimepath+=/usr/local/opt/fzf
 endif
 
+" FZF for files only under current working directory
+" From https://github.com/junegunn/fzf.vim/pull/1160#issuecomment-801601546
+command! -bang -nargs=? GFilesCwd call fzf#vim#gitfiles(<q-args>, fzf#vim#with_preview(<q-args> == '?' ? { 'dir': getcwd(), 'placeholder': '' } : { 'dir': getcwd() }), <bang>0)
+
 " FZF bindings
-nmap <leader>f :Files<Return>
-nmap <leader>t :GFiles<Return>
+nmap <leader>fa :Files<Return>
+nmap <leader>fg :GFiles<Return>
+nmap <leader>fc :GFilesCwd<Return>
+nmap <leader>fb :Buffers<Return>
+nmap <leader>t :GFilesCwd<Return>
 
 " Select last-changed text in same visual mode
 nnoremap <expr> <leader>gv '`[' . strpart(getregtype(), 0, 1) . '`]'
-" Configuration for ALE
-" Lint both CSS and JS in tsx and jsx files
-augroup FiletypeGroup
-	autocmd!
-	au BufNewFile,BufRead *.jsx set filetype=javascript.css
-	au BufNewFile,BufRead *.tsx set filetype=typescript.css
-augroup END
+
 let g:ale_completion_enabled = 1
 set omnifunc=ale#completion#OmniFunc
 let g:ale_completion_autoimport = 1
+let g:ale_floating_preview = 1
+let g:ale_floating_window_border = ['│', '─', '╭', '╮', '╯', '╰'] " Straight from docs
 nmap <leader>? :ALEHover<Return>
 nmap <leader>e? :ALEDetail<Return>
 nmap <leader>en :ALENext<Return>
 nmap <leader>eN :ALEPrevious<Return>
+nmap <leader>i :ALEImport<Return>
+nmap <leader>gdd :ALEGoToDefinition<Return>
+nmap <leader>gdt :ALEGoToTypeDefinition<Return>
+nmap <leader>ref :ALECodeAction<Return>
+vmap <leader>ref :ALECodeAction<Return>
+nmap <leader>ren :ALERename<Return>
 
 " Jump between source, stories, tests of this file
 nmap <leader>g. :e<Space><C-R>%<C-F>:s/\.\@<=\(stories\\|test\)\.//ge<Return><Return>
