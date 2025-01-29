@@ -197,7 +197,7 @@ let g:python_recommended_style = 0
 autocmd BufNewFile,BufRead .env.example setfiletype sh
 
 " Timestamp bindings for timesheet files
-autocmd FileType timesheet nnoremap <buffer> <Return><Return> :r !date +"\%Y-\%m-\%dT\%H:\%M:\%S\%z (\%a)"<Return>A<Tab>
+autocmd FileType timesheet nnoremap <buffer> <Return><Return> :r !date +"\%Y-\%m-\%dT\%H:\%M:\%S\%z (W\%V-\%a)"<Return>A<Tab>
 autocmd FileType timesheet nnoremap <buffer> <Return>s o<Esc>:r !date +"\%Y-W\%V"<Return>Istart<Tab><Esc>
 autocmd FileType timesheet inoremap <buffer> <Space><Space> <Tab><Esc>m`k03Wyt<Tab>``pa<Tab>
 
