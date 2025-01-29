@@ -16,6 +16,7 @@
 	unwrap = !"pandoc -f gfm -t gfm --wrap=none"
 	showm = show --no-patch --format=format:%B
 	logm = log --no-patch --format=format:%B
+	puf = push --force-with-lease --force-if-includes
 [push]
 	default = upstream
 [tag]
