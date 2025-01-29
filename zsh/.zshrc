@@ -201,3 +201,19 @@ if [ -d $HOME/.nvm ]; then
 	[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # Load NVM
 	[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 fi
+
+# Ignore F13 through F24 presses (don't show visual bell),
+# since I use these as systemwide hotkeys.
+# I can't find a zsh no-op but "redisplay" does the job
+bindkey "[1;2P" redisplay
+bindkey "[1;2Q" redisplay
+bindkey "[1;2R" redisplay
+bindkey "[1;2S" redisplay
+bindkey "[15;2~" redisplay
+bindkey "[17;2~" redisplay
+bindkey "[18;2~" redisplay
+bindkey "[19;2~" redisplay
+bindkey "[20;2~" redisplay
+bindkey "[21;2~" redisplay
+bindkey "[23;2~" redisplay
+bindkey "[24;2~" redisplay
