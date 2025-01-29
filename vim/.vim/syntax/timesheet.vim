@@ -6,12 +6,12 @@ elseif exists("b:current_syntax")
 	finish
 endif
 
-syntax match timesheetTimestamp "^[0-9]\{4\}\(-[0-9]\{2\}\)\{2\}T[0-9]\{2\}\(:[0-9]\{2\}\)\{2\}[+-][0-9]\{4\} " nextgroup=timesheetWeekday contains=timesheetTimestampDate,timesheetTimestampT,timesheetTimestampTimeHM,timesheetTimestampTz
+syntax match timesheetTimestamp "^[0-9]\{4\}\(-[0-9]\{2\}\)\{2\}[T ][0-9]\{2\}\(:[0-9]\{2\}\)\{2\}\([+-][0-9]\{4\}\| [A-Z]\{3\}\) " nextgroup=timesheetWeekday contains=timesheetTimestampDate,timesheetTimestampSep,timesheetTimestampTimeHM,timesheetTimestampTz
 syntax match timesheetTimestampDate "^[0-9]\{4\}\(-[0-9]\{2\}\)\{2\}" contained
-syntax match timesheetTimestampT "\(^[0-9]\{4\}\(-[0-9]\{2\}\)\{2\}\)\@<=T" contained
-syntax match timesheetTimestampTimeHM "T\@<=[0-9]\{2\}:[0-9]\{2\}" contained
-syntax match timesheetTimestampTz "\([0-9]\{2\}\(:[0-9]\{2\}\)\{2\}\)\@<=-[0-9]\{4\}" contained
-syntax match timesheetWeekday "([A-Za-z]\{3\})\t" nextgroup=timesheetStatus contains=timesheetWeekdaySun,timesheetWeekdayMon,timesheetWeekdayTue,timesheetWeekdayWed,timesheetWeekdayThu,timesheetWeekdayFri,timesheetWeekdaySat
+syntax match timesheetTimestampSep "\(^[0-9]\{4\}\(-[0-9]\{2\}\)\{2\}\)\@<=[T ]" contained
+syntax match timesheetTimestampTimeHM "[T ]\@<=[0-9]\{2\}:[0-9]\{2\}" contained
+syntax match timesheetTimestampTz "\([0-9]\{2\}\(:[0-9]\{2\}\)\{2\}\)\@<=\(-[0-9]\{4\}\| [A-Z]\{3\}\)" contained
+syntax match timesheetWeekday "(\(W[0-9]\+-\)\?[A-Za-z]\{3\})\t" nextgroup=timesheetStatus contains=timesheetWeekdaySun,timesheetWeekdayMon,timesheetWeekdayTue,timesheetWeekdayWed,timesheetWeekdayThu,timesheetWeekdayFri,timesheetWeekdaySat
 syntax match timesheetWeekdaySun "Sun" contained
 syntax match timesheetWeekdayMon "Mon" contained
 syntax match timesheetWeekdayTue "Tue" contained
@@ -34,7 +34,7 @@ syntax match timesheetInvoiceName "[^\t#]\+" contained nextgroup=timesheetCommen
 syntax match timesheetComment "#.*$"
 
 "hi def link timesheetTimestamp Number
-hi def timesheetTimestampT ctermfg=darkGray
+hi def timesheetTimestampSep ctermfg=darkGray
 hi def link timesheetTimestampTimeHM Number
 hi def timesheetTimestampTz ctermfg=darkGray
 "hi def link timesheetWeekday Number
