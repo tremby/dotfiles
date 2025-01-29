@@ -242,3 +242,6 @@ nmap <leader>ren :ALERename<Return>
 nmap <leader>g. :e<Space><C-R>%<C-F>:s/\.\@<=\(stories\\|test\)\.//ge<Return><Return>
 nmap <leader>gs :e<Space><C-R>%<C-F>:s/\.\@<=\(stories\\|test\)\.//ge<Return>$F.i.stories<Esc><Return>
 nmap <leader>gt :e<Space><C-R>%<C-F>:s/\.\@<=\(stories\\|test\)\.//ge<Return>$F.i.test<Esc><Return>
+
+" Define gqlFragment as a GraphQL JS tag so it'll highlight (used on Loca)
+let g:graphql_javascript_tags = ["gql", "graphql", "Relay.QL", "gqlFragment"]
