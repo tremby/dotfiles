@@ -13,6 +13,9 @@
 	graph = !"git graph1"
 	logg = log --graph --decorate --all --oneline
 	releaselog = !"git shortlog --no-merges $(git tag | tail -n 1)..HEAD"
+	unwrap = !"pandoc -f gfm -t gfm --wrap=none"
+	showm = show --no-patch --format=format:%B
+	logm = log --no-patch --format=format:%B
 [push]
 	default = upstream
 [tag]
