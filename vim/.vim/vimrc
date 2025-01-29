@@ -105,10 +105,6 @@ let g:jsx_ext_required = 0
 set grepprg=git\ grep\ -n\ $*
 
 " Mappings
-nnoremap <silent><C-j> :se paste<CR>m`o<Esc>:se nopaste<CR>``
-nnoremap <silent><C-k> :se paste<CR>m`O<Esc>:se nopaste<CR>``
-"imap <C-j> <Esc><C-j>a
-"imap <C-k> <Esc><C-k>a
 
 " Search for selected text, forwards or backwards
 vnoremap <silent> * :<C-U>
