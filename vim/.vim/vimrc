@@ -243,5 +243,35 @@ nmap <leader>g. :e<Space><C-R>%<C-F>:s/\.\@<=\(stories\\|test\)\.//ge<Return><Re
 nmap <leader>gs :e<Space><C-R>%<C-F>:s/\.\@<=\(stories\\|test\)\.//ge<Return>$F.i.stories<Esc><Return>
 nmap <leader>gt :e<Space><C-R>%<C-F>:s/\.\@<=\(stories\\|test\)\.//ge<Return>$F.i.test<Esc><Return>
 
-" Define gqlFragment as a GraphQL JS tag so it'll highlight (used on Loca)
+" Define gqlFragment as a GraphQL JS tag so it'll highlight
 let g:graphql_javascript_tags = ["gql", "graphql", "Relay.QL", "gqlFragment"]
+
+" Experimental Prettier formatting
+function PrettierPrepare()
+	let b:tmp_view = winsaveview()
+endfunction
+function PrettierFinish()
+	if v:shell_error == 0
+		let b:tmp_offset = getbufline(bufnr("%"), line("$"))[0]
+		$d
+		call winrestview(b:tmp_view)
+		exec "goto" b:tmp_offset
+	else
+		let b:tmp_error = getbufline(bufnr("%"), 1)[0]
+		undo
+		call winrestview(b:tmp_view)
+		echomsg b:tmp_error
+	endif
+endfunction
+function PrettierAll()
+	call PrettierPrepare()
+	exec "silent %!npx prettier --stdin-filepath \"%\" --cursor-offset" line2byte(line("."))+col(".")-1
+	call PrettierFinish()
+endfunction
+function PrettierSelection()
+	call PrettierPrepare()
+	exec "silent %!npx prettier --stdin-filepath \"%\" --range-start" line2byte(line("'<"))+col("'<")-1 "--range-end" line2byte(line("'>"))+col("'>")-1 "--cursor-offset" line2byte(line("."))+col(".")-1
+	call PrettierFinish()
+endfunction
+nmap <leader>p :call PrettierAll()<Return>
+vmap <leader>p <Esc>:call PrettierSelection()<Return>
