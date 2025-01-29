@@ -68,6 +68,7 @@ alias info='info --vi-keys'
 alias ssh='TERM=xterm-256color ssh'
 alias steam='GDK_SCALE=1 steam'
 alias mutt=neomutt
+alias cal='ncal -bMw3'
 
 # Path head
 local uname=$(uname)
