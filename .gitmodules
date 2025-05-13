@@ -52,3 +52,6 @@
 [submodule "vim/.vim/pack/bundle/start/ale"]
 	path = vim/.vim/pack/bundle/start/ale
 	url = git@github.com:dense-analysis/ale.git
+[submodule "vim/.vim/pack/bundle/start/vim-prisma"]
+	path = vim/.vim/pack/bundle/start/vim-prisma
+	url = https://github.com/prisma/vim-prisma.git
