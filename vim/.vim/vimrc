@@ -233,6 +233,9 @@ nmap <leader>t :GFilesCwd<Return>
 " Select last-changed text in same visual mode
 nnoremap <expr> <leader>gv '`[' . strpart(getregtype(), 0, 1) . '`]'
 
+" Find out what syntax highlighting group is under the cursor
+map <leader>hl :echo "hi<" . synIDattr(synID(line("."),col("."),1),"name") . '> trans<' . synIDattr(synID(line("."),col("."),0),"name") . "> lo<" . synIDattr(synIDtrans(synID(line("."),col("."),1)),"name") . ">"<CR>
+
 let g:ale_completion_enabled = 1
 set omnifunc=ale#completion#OmniFunc
 let g:ale_completion_autoimport = 1
