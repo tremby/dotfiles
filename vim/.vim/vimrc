@@ -236,6 +236,26 @@ nnoremap <expr> <leader>gv '`[' . strpart(getregtype(), 0, 1) . '`]'
 " Find out what syntax highlighting group is under the cursor
 map <leader>hl :echo "hi<" . synIDattr(synID(line("."),col("."),1),"name") . '> trans<' . synIDattr(synID(line("."),col("."),0),"name") . "> lo<" . synIDattr(synIDtrans(synID(line("."),col("."),1)),"name") . ">"<CR>
 
+" Command to add relevant "eslint-disable-next-line" comment
+" From https://stackoverflow.com/a/64791026/496046
+command! ALEIgnoreEslint call AleIgnoreEslint()
+function! AleIgnoreEslint()
+	let l:codes = []
+	if (!exists('b:ale_highlight_items'))
+		echo 'cannot ignore eslint rule without b:ale_highlight_items'
+		return
+	endif
+	for l:item in b:ale_highlight_items
+		if (l:item['lnum']==line('.') && l:item['linter_name']=='eslint')
+			let l:code = l:item['code']
+			call add(l:codes, l:code)
+		endif
+	endfor
+	if len(l:codes)
+		exec 'normal O/* eslint-disable-next-line ' . join(l:codes, ', ') . ' */'
+	endif
+endfunction
+
 let g:ale_completion_enabled = 1
 set omnifunc=ale#completion#OmniFunc
 let g:ale_completion_autoimport = 1
