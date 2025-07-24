@@ -271,6 +271,8 @@ nmap <leader>gdt :ALEGoToTypeDefinition<Return>
 nmap <leader>ref :ALECodeAction<Return>
 vmap <leader>ref :ALECodeAction<Return>
 nmap <leader>ren :ALERename<Return>
+nmap <leader>lef :ALEFix eslint<Return>
+nmap <leader>lei :ALEIgnoreEslint<Return>
 
 " Jump between source, stories, tests of this file
 nmap <leader>g. :e<Space><C-R>%<C-F>:s/\.\@<=\(stories\\|test\)\.//ge<Return><Return>
