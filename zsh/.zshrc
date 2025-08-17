@@ -72,7 +72,7 @@ alias cal='ncal -bMw3'
 
 # Path head
 local uname=$(uname)
-export PATH="$HOME/bin:$HOME/.local/bin:$HOME/.config/composer/vendor/bin"
+export PATH="$HOME/bin:$HOME/.local/bin:$HOME/.cargo/bin:$HOME/.config/composer/vendor/bin"
 export MANPATH="$HOME/.local/share/man:/usr/local/man:$MANPATH"
 
 # For Mac OS, use GNU coreutils
