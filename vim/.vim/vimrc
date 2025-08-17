@@ -100,6 +100,21 @@ if version >= 700
 
 	" Make folds more readable
 	highlight Folded ctermbg=darkgray guibg=gray15
+
+	" Adjust line numbers
+	highlight LineNr term=underline ctermfg=gray guifg=gray45
+	highlight LineNrAbove term=underline ctermfg=darkgray guifg=gray25
+	highlight LineNrBelow term=underline ctermfg=darkgray guifg=gray25
+
+	" Adjust status lines, splits, and gutter
+	highlight clear StatusLineNC
+	highlight clear StatusLine
+	highlight clear VertSplit
+	highlight clear SignColumn
+	highlight StatusLineNC term=reverse ctermbg=gray ctermfg=black guibg=gray50 guifg=black
+	highlight StatusLine term=bold,reverse cterm=bold ctermbg=lightgray ctermfg=black gui=bold guibg=gray85 guifg=black
+	highlight VertSplit term=reverse ctermbg=gray ctermfg=black guibg=gray50 guifg=black
+	highlight SignColumn term=standout ctermbg=darkgray ctermfg=cyan guibg=gray10 guifg=cyan
 endif
 
 " Enable true colour mode
