@@ -1,0 +1,17 @@
+# Not sure why I need to do this since reinstalling the OS, but switch displays
+exec "xrandr --output DP-2 --left-of DP-4"
+exec i3-msg "workspace 1; move workspace to output right; workspace 2; move workspace to output right"
+
+# Load layouts
+exec i3-msg "workspace 1; append_layout ~/.config/i3/spiral/workspace-1.json"
+exec i3-msg "workspace 2; append_layout ~/.config/i3/spiral/workspace-2.json"
+
+# Load layout 1 apps
+exec "~/.config/i3/spiral/tmux-audio.sh"
+exec "~/.config/i3/spiral/tmux-mail.sh"
+exec signal-desktop
+exec telegram
+exec discord
+
+# Load layout 2 apps
+exec "~/.config/i3/tmux-main.sh"

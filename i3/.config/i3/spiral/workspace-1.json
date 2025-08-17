@@ -1,0 +1,200 @@
+// vim:ts=4:sw=4:et
+{
+    // splith split container with 4 children
+    "border": "normal",
+    "floating": "auto_off",
+    "layout": "splith",
+    "marks": [],
+    "percent": 1,
+    "type": "con",
+    "nodes": [
+        {
+            // splitv split container with 1 children
+            "border": "normal",
+            "floating": "auto_off",
+            "layout": "splitv",
+            "marks": [],
+            "percent": 0.20609375,
+            "type": "con",
+            "nodes": [
+                {
+                    "border": "normal",
+                    "current_border_width": 2,
+                    "floating": "auto_off",
+                    "geometry": {
+                       "height": 532,
+                       "width": 884,
+                       "x": 0,
+                       "y": 0
+                    },
+                    "marks": [],
+                    "name": "Audio",
+                    "percent": 1,
+                    "swallows": [
+                       {
+                           "class": "^audio$"
+                       }
+                    ],
+                    "type": "con"
+                }
+            ]
+        },
+        {
+            // splitv split container with 2 children
+            "border": "normal",
+            "floating": "auto_off",
+            "layout": "splitv",
+            "marks": [],
+            "percent": 0.326666666666667,
+            "type": "con",
+            "nodes": [
+                {
+                    "border": "normal",
+                    "current_border_width": 2,
+                    "floating": "auto_off",
+                    "geometry": {
+                       "height": 532,
+                       "width": 884,
+                       "x": 0,
+                       "y": 0
+                    },
+                    "marks": [],
+                    "name": "Mail",
+                    "percent": 0.5,
+                    "swallows": [
+                       {
+                           "class": "^mail$"
+                       }
+                    ],
+                    "type": "con"
+                },
+                {
+                    "border": "normal",
+                    "current_border_width": 2,
+                    "floating": "auto_off",
+                    "geometry": {
+                       "height": 1051,
+                       "width": 1250,
+                       "x": 794,
+                       "y": 1088
+                    },
+                    "marks": [],
+                    "name": "Discord",
+                    "percent": 0.5,
+                    "swallows": [
+                       {
+                           "class": "^discord$",
+                           "title": "^Discord$" // to exclude splash screen, and target first title of main screen
+                       }
+                    ],
+                    "type": "con"
+                }
+            ]
+        },
+        {
+            // splitv split container with 1 children
+            "border": "normal",
+            "floating": "auto_off",
+            "layout": "splitv",
+            "marks": [],
+            "percent": 0.467239583333333,
+            "type": "con",
+            "nodes": [
+                {
+                    // splitv split container with 2 children
+                    "border": "normal",
+                    "floating": "auto_off",
+                    "layout": "splitv",
+                    "marks": [],
+                    "percent": 1,
+                    "type": "con",
+                    "nodes": [
+                        {
+                            // stacked split container with 1 children
+                            "border": "normal",
+                            "floating": "auto_off",
+                            "layout": "stacked",
+                            "marks": [],
+                            "percent": 0.562587575899113,
+                            "type": "con",
+                            "nodes": [
+                                {
+                                    "border": "normal",
+                                    "current_border_width": 2,
+                                    "floating": "auto_off",
+                                    "geometry": {
+                                       "height": 729,
+                                       "width": 1790,
+                                       "x": 0,
+                                       "y": 0
+                                    },
+                                    "marks": [],
+                                    "name": "Browser aux",
+                                    "percent": 1,
+                                    "swallows": [
+                                       {
+                                           "window_role": "^browser$"
+                                       }
+                                    ],
+                                    "type": "con"
+                                }
+                            ]
+                        },
+                        {
+                            // splith split container with 2 children
+                            "border": "normal",
+                            "floating": "auto_off",
+                            "layout": "splith",
+                            "marks": [],
+                            "percent": 0.437412424100887,
+                            "type": "con",
+                            "nodes": [
+                                {
+                                    "border": "normal",
+                                    "current_border_width": 2,
+                                    "floating": "auto_off",
+                                    "geometry": {
+                                       "height": 622,
+                                       "width": 893,
+                                       "x": 2048,
+                                       "y": 18
+                                    },
+                                    "marks": [],
+                                    "name": "Telegram",
+                                    "percent": 0.5,
+                                    "swallows": [
+                                       {
+                                           "class": "^TelegramDesktop$"
+                                       }
+                                    ],
+                                    "type": "con"
+                                },
+                                {
+                                    "border": "normal",
+                                    "current_border_width": 2,
+                                    "floating": "auto_off",
+                                    "geometry": {
+                                       "height": 622,
+                                       "width": 893,
+                                       "x": 2945,
+                                       "y": 18
+                                    },
+                                    "marks": [],
+                                    "name": "Signal",
+                                    "percent": 0.5,
+                                    "swallows": [
+                                       {
+                                           "class": "^Signal$",
+                                           "window_role": "^browser\\-window$" // to exclude splash screen
+                                       }
+                                    ],
+                                    "type": "con"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

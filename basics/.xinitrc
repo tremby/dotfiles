@@ -42,5 +42,10 @@ fi
 # i3
 kill "$(pgrep -f track-last-focused.sh)"
 
-# Run the window manager
+# Configure and run the window manager
+if [ -f "$HOME/.config/i3/config.$(hostname)" ]; then
+	cat "$HOME/.config/i3/config.base" "$HOME/.config/i3/config.$(hostname)" >"$HOME/.config/i3/config"
+else
+	ln -sf "$HOME/.config/i3/config.base" "$HOME/.config/i3/config"
+fi
 exec i3
