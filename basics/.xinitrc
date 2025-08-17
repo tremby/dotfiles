@@ -2,7 +2,7 @@
 
 # Environment variables
 # MPD host
-if [ $(hostname) = spiral -o $(hostname) = elastic ]; then
+if [[ "$(hostname)" = spiral || "$(hostname)" = elastic ]]; then
 	export MPD_HOST=hoard
 fi
 
@@ -34,13 +34,13 @@ redshift-gtk &
 blueman-applet &
 
 # Run local settings if there are any
-if [ -f $HOME/.xinitrc.local ]; then
-	. $HOME/.xinitrc.local
+if [ -f "$HOME/.xinitrc.local" ]; then
+	. "$HOME/.xinitrc.local"
 fi
 
 # Tidy up any focus tracking scripts still running from a previous instance of
 # i3
-kill $(pgrep -f track-last-focused.sh)
+kill "$(pgrep -f track-last-focused.sh)"
 
 # Run the window manager
 exec i3
