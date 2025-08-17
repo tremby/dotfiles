@@ -8,8 +8,9 @@
 [rebase]
 	autosquash = true
 [alias]
-	graph1 = log --graph --decorate --all --format=format:'%C(yellow)%h%C(reset) %C(white)%<|(66,trunc)%s%C(reset) %C(cyan)%an%C(reset) %C(magenta)%ar%C(reset)%C(auto)%d%C(reset)'
-	graph2 = log --graph --decorate --all --format=format:'%C(yellow)%h%C(reset) %C(green)%aD%C(reset) %C(magenta)%ar%C(reset)%C(auto)%d%C(reset)%n       %C(yellow)`-%C(reset) %C(white)%w(76,0,10)%s%w(0)%C(reset) %C(cyan)%an%C(reset)'
+	graph1 = log --graph --decorate --all --format=format:'%C(yellow)%h%C(reset) %<|(66,mtrunc)%s %C(cyan)%an%C(reset) %C(magenta)%ar%C(reset)%C(auto)%d%C(reset)'
+	graph2 = log --graph --decorate --all --format=format:'%C(yellow)%h%C(reset) %C(green)%aD%C(reset) %C(magenta)%ar%C(reset)%C(auto)%d%C(reset)%n       %C(yellow)`-%C(reset) %w(76,0,10)%s %w(0)% %C(cyan)%an%C(reset)'
+	graphw = log --graph --decorate --all --format=format:'%C(yellow)%h%C(reset) %w(140,0,10)%s%C(reset) %C(cyan)%an%C(reset) %C(magenta)%ar%C(reset)%C(auto)%d%C(reset)'
 	graph = !"git graph1"
 	logg = log --graph --decorate --all --oneline
 	releaselog = !"git shortlog --no-merges $(git tag | tail -n 1)..HEAD"
