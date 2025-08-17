@@ -12,16 +12,19 @@ set nojoinspaces
 set synmaxcol=512
 set breakindent
 
-" Change cursors in different modes
-if exists('$TMUX')
-	let &t_SI .= "\ePtmux;\e\e[6 q\e\\" " Start insert (bar)
-	let &t_EI .= "\ePtmux;\e\e[2 q\e\\" " End insert/replace (block)
-	let &t_SR .= "\ePtmux;\e\e[4 q\e\\" " Start replace (underline)
-else
-	let &t_SI = "\e[6 q" " Start insert (bar)
-	let &t_EI = "\e[2 q" " End insert/replace (block)
-	let &t_SR = "\e[4 q" " Start replace (underline)
-endif
+" Commented out the below to try to figure out if it's causing weird characters
+" to appears when mousing out and in in particular modes, and sometimes even
+" backgrounding vim. It's annoying.
+"" Change cursors in different modes
+"if exists('$TMUX')
+"	let &t_SI .= "\ePtmux;\e\e[6 q\e\\" " Start insert (bar)
+"	let &t_EI .= "\ePtmux;\e\e[2 q\e\\" " End insert/replace (block)
+"	let &t_SR .= "\ePtmux;\e\e[4 q\e\\" " Start replace (underline)
+"else
+"	let &t_SI = "\e[6 q" " Start insert (bar)
+"	let &t_EI = "\e[2 q" " End insert/replace (block)
+"	let &t_SR = "\e[4 q" " Start replace (underline)
+"endif
 
 " Readout
 set showcmd
