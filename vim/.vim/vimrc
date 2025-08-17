@@ -352,3 +352,8 @@ function PrettierSelection()
 endfunction
 nmap <leader>p :call PrettierAll()<Return>
 vmap <leader>p <Esc>:call PrettierSelection()<Return>
+
+" Set Polyglot/YATS's typescript compiler. Use `:make --project` for whole project rather than just current file.
+" The set -F is to disable zsh globbing, so that filenames with square brackets are handled.
+let g:typescript_compiler_binary = 'set -F && npx tsc'
+let g:typescript_compiler_options = '--noEmit'
