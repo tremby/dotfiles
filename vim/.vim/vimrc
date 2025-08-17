@@ -121,6 +121,29 @@ endif
 if exists('+termguicolors')
 	let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
 	let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
+	" I'm not sure exactly what's going on here but I originally copied in
+	" the 16 colours I've set up in my terminal, but they come out dark.
+	" Now it's the bright set of colours, repeated. They still seem to
+	" come out slightly different from in a plain terminal.
+	" It'll do for now.
+	let g:terminal_ansi_colors=[
+		\'#676965',
+		\'#f44135',
+		\'#98e342',
+		\'#fcea60',
+		\'#83afd8',
+		\'#bc93b6',
+		\'#37e5e7',
+		\'#f1f1ef',
+		\'#676965',
+		\'#f44135',
+		\'#98e342',
+		\'#fcea60',
+		\'#83afd8',
+		\'#bc93b6',
+		\'#37e5e7',
+		\'#f1f1ef'
+	\]
 	set termguicolors
 endif
 
