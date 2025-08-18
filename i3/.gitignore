@@ -1,0 +1,2 @@
+# The config file is produced as a concatenation of config.base and local config
+/.config/i3/config
