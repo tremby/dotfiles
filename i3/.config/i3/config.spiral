@@ -14,4 +14,4 @@ exec telegram
 exec discord
 
 # Load layout 2 apps
-exec "~/.config/i3/tmux-main.sh"
+exec "~/.config/i3/spiral/tmux-main.sh"
